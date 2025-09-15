@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 1
 requires-python = ">=3.9"
 resolution-markers = [
     "python_full_version >= '3.13'",
@@ -5180,8 +5180,8 @@ version = "0.25.0"
 source = { registry = "https://artifactory.ess.midasplayer.com/artifactory/api/pypi/pypi-all/simple" }
 dependencies = [
     { name = "aiosqlite" },
-    { name = "iso8601", marker = "python_full_version < '4'" },
-    { name = "pypika-tortoise", marker = "python_full_version < '4'" },
+    { name = "iso8601", marker = "python_full_version < '4.0'" },
+    { name = "pypika-tortoise", marker = "python_full_version < '4.0'" },
     { name = "pytz" },
 ]
 sdist = { url = "https://artifactory.ess.midasplayer.com/artifactory/api/pypi/pypi-all/packages/packages/d8/02/89777797d2c74386e21fca4a879d15eef6a0a789e4b9564355e94c367e6e/tortoise_orm-0.25.0.tar.gz", hash = "sha256:7d0aaf31c33a25a9efad8f94b44ee50febae15889f4da119cf184ffe98002673" }
