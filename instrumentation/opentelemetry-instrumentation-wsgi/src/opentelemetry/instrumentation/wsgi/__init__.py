@@ -645,6 +645,7 @@ class OpenTelemetryMiddleware:
         return _start_response
 
     # pylint: disable=too-many-branches
+    # pylint: disable=too-many-locals
     def __call__(
         self, environ: WSGIEnvironment, start_response: StartResponse
     ):
@@ -696,7 +697,7 @@ class OpenTelemetryMiddleware:
                     self._sem_conv_opt_in_mode,
                 )
                 iterable = self.wsgi(environ, start_response)
-                return _iterate_and_close_with_span(iterable, span, token)
+                return _iterate_and_close_with_span(iterable, span)
         except Exception as ex:
             if _report_new(self._sem_conv_opt_in_mode):
                 req_attrs[ERROR_TYPE] = type(ex).__qualname__
